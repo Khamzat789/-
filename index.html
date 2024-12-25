@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minecraft - Официальный сайт</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #333;
+      line-height: 1.6;
+      background-image: url('https://i.imgur.com/9Q9Q9Q9.jpg'); /* Детализированная фоновая картинка */
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+    }
+    header {
+      background: rgba(76, 175, 80, 0.8); /* Полупрозрачный фон */
+      color: white;
+      padding: 40px 0;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      animation: fadeIn 2s ease-in-out;
+    }
+    nav {
+      background: rgba(51, 51, 51, 0.8); /* Полупрозрачный фон */
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 10px 0;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    nav a {
+      color: white;
+      text-align: center;
+      padding: 14px 20px;
+      text-decoration: none;
+      margin: 0 10px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+      background: linear-gradient(45deg, #4CAF50, #45a049);
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    nav a:hover {
+      background: linear-gradient(45deg, #45a049, #4CAF50);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+    }
+    .content {
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+      background: rgba(255, 255, 255, 0.9); /* Полупрозрачный белый фон */
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    h2 {
+      color: #4CAF50;
+      font-size: 2rem;
+      margin-bottom: 20px;
+      text-align: center;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+    p {
+      font-size: 1.1rem;
+      text-align: justify;
+      margin-bottom: 20px;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+    .gallery img {
+      width: 100%;
+      max-width: 300px;
+      border-radius: 10px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    }
+    .news, .modes, .community, .resources {
+      margin: 40px 0;
+    }
+    .news-item, .mode-item, .community-item, .resource-item {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      margin: 20px 0;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .news-item:hover, .mode-item:hover, .community-item:hover, .resource-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    }
+    .news-item h3, .mode-item h3, .community-item h3, .resource-item h3 {
+      margin-top: 0;
+      color: #4CAF50;
+      font-size: 1.5rem;
+    }
+    form {
+      max-width: 400px;
+      margin: 0 auto;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    form input, form textarea, form button {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+    form button {
+      background: linear-gradient(45deg, #4CAF50, #45a049);
+      color: white;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    form button:hover {
+      background: linear-gradient(45deg, #45a049, #4CAF50);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+    }
+    footer {
+      background: rgba(51, 51, 51, 0.8); /* Полупрозрачный фон */
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 40px;
+      box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+    }
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Шапка сайта -->
+  <header>
+    <h1>Добро пожаловать в Minecraft!</h1>
+  </header>
+
+  <!-- Навигация -->
+  <nav>
+    <a href="#home">Главная</a>
+    <a href="#about">О Minecraft</a>
+    <a href="#gallery">Галерея</a>
+    <a href="#news">Новости</a>
+    <a href="#modes">Режимы игры</a>
+    <a href="#community">Сообщество</a>
+    <a href="#resources">Ресурсы</a>
+    <a href="#contact">Контакты</a>
+  </nav>
+
+  <!-- Главная страница -->
+  <div id="home" class="content">
+    <h2>Главная</h2>
+    <p>Minecraft — это игра, где вы можете строить, исследовать и выживать в огромном открытом мире. Начните свое приключение уже сегодня!</p>
+  </div>
+
+  <!-- О Minecraft -->
+  <div id="about" class="content">
+    <h2>О Minecraft</h2>
+    <p>Minecraft — это песочница, разработанная Mojang Studios. Игра позволяет игрокам строить конструкции из текстурированных кубов в трехмерном мире. Вы можете играть в режиме выживания, творчества или приключений.</p>
+  </div>
+
+  <!-- Галерея -->
+  <div id="gallery" class="content">
+    <h2>Галерея</h2>
+    <div class="gallery">
+      <img src="https://www.computerra.ru/wp-content/uploads/2020/11/por_que_o_minecarft_faz_tanto_sucesso.jpg" alt="Minecraft 1">
+      <img src="https://www.digiseller.ru/preview/944309/p1_3035899_9d3fd086.jpg" alt="Minecraft 2">
+      <img src="https://i1.sndcdn.com/artworks-z56Hm7bDyDvMj5vk-4JThlw-t1080x1080.jpg" alt="Minecraft 3">
+      <img src="https://avatars.mds.yandex.net/get-mpic/3694390/img_id6454171452964349810.jpeg/orig" alt="Minecraft 4">
+      <img src="https://avatars.mds.yandex.net/i?id=d20c5c4e8ee3ecd289781601f253713c_l-5869156-images-thumbs&n=13" alt="Minecraft 5">
+      <img src="https://steamuserimages-a.akamaihd.net/ugc/960844256243618779/114BDD99C929278D0F861BFF9B38CF830D297079/" alt="Minecraft 6">
+    </div>
+  </div>
+
+  <!-- Новости -->
+  <div id="news" class="content">
+    <h2>Новости</h2>
+    <div class="news">
+      <div class="news-item">
+        <h3>Обновление 1.20: Trails & Tales</h3>
+        <p>Новое обновление добавляет новые блоки, мобы и возможности для творчества. Узнайте больше на официальном сайте.</p>
+      </div>
+      <div class="news-item">
+        <h3>Minecraft Live 2023</h3>
+        <p>Смотрите прямую трансляцию Minecraft Live, где будут представлены новые функции и обновления.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Режимы игры -->
+  <div id="modes" class="content">
+    <h2>Режимы игры</h2>
+    <div class="modes">
+      <div class="mode-item">
+        <h3>Выживание</h3>
+        <p>Собирайте ресурсы, стройте укрытия и выживайте в опасном мире.</p>
+      </div>
+      <div class="mode-item">
+        <h3>Творчество</h3>
+        <p>Стройте без ограничений, используя бесконечные ресурсы.</p>
+      </div>
+      <div class="mode-item">
+        <h3>Приключение</h3>
+        <p>Исследуйте карты, созданные другими игроками, и решайте головоломки.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Сообщество -->
+  <div id="community" class="content">
+    <h2>Сообщество</h2>
+    <div class="community">
+      <div class="community-item">
+        <h3>Форумы</h3>
+        <p>Присоединяйтесь к обсуждениям на официальных форумах Minecraft.</p>
+      </div>
+      <div class="community-item">
+        <h3>Серверы</h3>
+        <p>Играйте на многопользовательских серверах с друзьями.</p>
+      </div>
+      <div class="community-item">
+        <h3>Моды и текстуры</h3>
+        <p>Улучшите игру с помощью модов и пользовательских текстур.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Ресурсы -->
+  <div id="resources" class="content">
+    <h2>Ресурсы</h2>
+    <div class="resources">
+      <div class="resource-item">
+        <h3>Официальный сайт</h3>
+        <p><a href="https://www.minecraft.net" target="_blank">Перейти на официальный сайт Minecraft</a></p>
+      </div>
+      <div class="resource-item">
+        <h3>Вики</h3>
+        <p><a href="https://minecraft.fandom.com" target="_blank">Официальная вики по Minecraft</a></p>
+      </div>
+      <div class="resource-item">
+        <h3>Форумы</h3>
+        <p><a href="https://www.minecraftforum.net" target="_blank">Форумы Minecraft</a></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Контакты -->
+  <div id="contact" class="content">
+    <h2>Контакты</h2>
+    <form action="#" method="post">
+      <input type="text" name="name" placeholder="Ваше имя" required>
+      <input type="email" name="email" placeholder="Ваш email" required>
+      <textarea name="message" placeholder="Ваше сообщение" rows="5" required></textarea>
+      <button type="submit">Отправить</button>
+    </form>
+  </div>
+
+  <!-- Подвал -->
+  <footer>
+    <p>&copy; 2023 Minecraft. Все права защищены.</p>
+  </footer>
+
+</body>
+</html>
